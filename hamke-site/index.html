@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hamke Tours: Tours por Corea del Sur con guía en español</title>
+  <meta name="description" content="Descubre Corea del Sur con Hamke Tours: recorridos en español por Seúl, Busan, Jeju y el DMZ con un guía local que conoce el país desde adentro.">
+  <link rel="canonical" href="https://hamketours.com/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hamke Tours">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Hamke Tours: Tours por Corea del Sur con guía en español">
+  <meta property="og:description" content="Descubre Corea del Sur con Hamke Tours: recorridos en español por Seúl, Busan, Jeju y el DMZ con un guía local que conoce el país desde adentro.">
+  <meta property="og:url" content="https://hamketours.com/">
+  <meta property="og:image" content="https://hamketours.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hamke Tours: Tours por Corea del Sur con guía en español">
+  <meta name="twitter:description" content="Descubre Corea del Sur con Hamke Tours: recorridos en español por Seúl, Busan, Jeju y el DMZ con un guía local que conoce el país desde adentro.">
+  <meta name="twitter:image" content="https://hamketours.com/og-image.jpg">
+  <meta name="theme-color" content="#1A2B4A">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #F2EDE3; color: #1A2B4A; font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+    html { scroll-behavior: smooth; }
+
+    @keyframes fall {
+      0%   { transform: translateY(-60px) rotate(0deg); opacity: 0; }
+      8%   { opacity: 0.85; }
+      85%  { opacity: 0.6; }
+      100% { transform: translateY(108vh) rotate(540deg); opacity: 0; }
+    }
+    @keyframes sway {
+      0%, 100% { margin-left: 0px; }
+      50%       { margin-left: 26px; }
+    }
+    @keyframes floatLogo {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-13px); }
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulseBar {
+      0%, 100% { opacity: 0.35; transform: scaleY(1); }
+      50%       { opacity: 1; transform: scaleY(0.55); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 767px) {
+      .petal { width: 18px !important; height: 14px !important; }
+      .nav-text-links { display: none !important; }
+      nav { padding: 0 16px !important; height: 58px !important; }
+      nav span { font-size: 14px !important; }
+      .hero-content { padding: 90px 20px 200px !important; }
+      .hero-logo { width: 120px !important; height: 120px !important; margin-bottom: 22px !important; }
+      .hero-stats > div { padding: 0 14px !important; }
+      .hero-stats > div > div:first-child { font-size: 18px !important; }
+      .grid-tours  { grid-template-columns: 1fr !important; }
+      .grid-about  { grid-template-columns: 1fr !important; gap: 40px !important; }
+      .about-img-badge { bottom: 12px !important; right: 12px !important; }
+      .grid-exp    { grid-template-columns: 1fr 1fr !important; }
+      .grid-stats  { grid-template-columns: 1fr 1fr !important; gap: 20px !important; }
+      .grid-facts  { grid-template-columns: 1fr 1fr !important; }
+      .grid-reviews { grid-template-columns: 1fr !important; }
+      .section-pad { padding-left: 20px !important; padding-right: 20px !important; padding-top: 64px !important; padding-bottom: 64px !important; }
+      .cta-btns a  { width: 100% !important; text-align: center !important; box-sizing: border-box !important; }
+      footer { padding: 24px 20px !important; flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .grid-tours  { grid-template-columns: 1fr 1fr !important; }
+      .grid-exp    { grid-template-columns: 1fr 1fr !important; }
+      .grid-stats  { grid-template-columns: 1fr 1fr !important; }
+      .grid-facts  { grid-template-columns: 1fr 1fr !important; }
+      .grid-reviews { grid-template-columns: 1fr 1fr !important; }
+      .section-pad { padding-left: 32px !important; padding-right: 32px !important; }
+    }
+  
+      .hkf-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+      .hkf-tile { transition:transform .4s cubic-bezier(.22,1,.36,1), box-shadow .35s; height:100%; }
+      .hkf-tile:hover { transform:translateY(-6px); box-shadow:0 18px 40px rgba(26,43,74,.12); }
+      @media (max-width:820px){ .hkf-grid { grid-template-columns:repeat(2,1fr); } }
+      @media (max-width:520px){ .hkf-grid { grid-template-columns:1fr; } }
+    
+      /* --- hover polish (cards lift + buttons pop) --- */
+      .grid-tours > [data-fade], .grid-exp > [data-fade], .hkr-wall > [data-fade] {
+        transition: opacity .8s ease, transform .45s cubic-bezier(.22,1,.36,1), box-shadow .4s ease !important;
+      }
+      .grid-tours > [data-fade]:hover, .grid-exp > [data-fade]:hover, .hkr-wall > [data-fade]:hover {
+        transform: translateY(-8px) !important;
+        box-shadow: 0 24px 50px rgba(26,43,74,.16) !important;
+      }
+      a[style*="background:#1A2B4A"], a[style*="background:#C85A3C"] {
+        transition: background .22s ease, transform .2s ease, box-shadow .25s ease !important;
+      }
+      a[style*="background:#1A2B4A"]:hover { transform: translateY(-2px) !important; box-shadow: 0 10px 22px rgba(26,43,74,.28) !important; }
+      a[style*="background:#C85A3C"]:hover { transform: translateY(-2px) !important; box-shadow: 0 10px 24px rgba(200,90,60,.34) !important; }
+    </style>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Hamke Tours",
+  "description": "Descubre Corea del Sur con Hamke Tours: recorridos en español por Seúl, Busan, Jeju y el DMZ con un guía local que conoce el país desde adentro.",
+  "url": "https://hamketours.com/",
+  "image": "https://hamketours.com/og-image.jpg",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Corea del Sur"
+  },
+  "knowsLanguage": [
+    "es",
+    "ko",
+    "en"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Chang Lee"
+  },
+  "sameAs": [
+    "https://www.instagram.com/hamketours",
+    "https://www.instagram.com/comekimchi",
+    "https://www.youtube.com/@Chagabee",
+    "https://www.tiktok.com/@comekimchi"
+  ]
+}</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav style="position:fixed; top:0; left:0; right:0; z-index:1000; height:68px; display:flex; align-items:center; justify-content:space-between; padding:0 48px; background:rgba(242,237,227,0.96); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid rgba(26,43,74,0.07);">
+  <div style="display:flex; align-items:center; gap:10px;">
+    <img src="images/99eb590a-0f2b-47f9-a5e6-899c394089bd.png" alt="Hamke Tours" style="width:44px; height:44px; border-radius:50%; object-fit:cover; border:2px solid rgba(26,43,74,0.12);">
+    <span style="font-weight:800; font-size:17px; color:#1A2B4A; letter-spacing:0.5px;">HAMKE TOURS</span>
+  </div>
+  <div style="display:flex; align-items:center; gap:20px;">
+    <div class="nav-text-links" style="display:flex; align-items:center; gap:24px;">
+      <a href="#tours" style="color:#1A2B4A; text-decoration:none; font-size:13px; font-weight:500; opacity:0.65; transition:opacity 0.2s;" style-hover="opacity:1;">Tours</a>
+      <a href="#about" style="color:#1A2B4A; text-decoration:none; font-size:13px; font-weight:500; opacity:0.65; transition:opacity 0.2s;" style-hover="opacity:1;">Nosotros</a>
+      <a href="#experiences" style="color:#1A2B4A; text-decoration:none; font-size:13px; font-weight:500; opacity:0.65; transition:opacity 0.2s;" style-hover="opacity:1;">Experiencias</a>
+    </div>
+    <a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" style="background:#1A2B4A; color:#F2EDE3; text-decoration:none; font-size:12px; font-weight:700; letter-spacing:1.2px; padding:10px 22px; border-radius:2px; white-space:nowrap; transition:background 0.2s;" style-hover="background:#2A3B6A;">RESERVAR</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero-section" style="position:relative; min-height:auto; overflow:hidden; background:linear-gradient(180deg, #E9F2FB 0%, #F5F9FD 50%, #FFFFFF 100%); display:flex; align-items:center; justify-content:center;">
+
+  <!-- Korean watermark layer -->
+  <div id="hero-bg-layer" style="position:absolute; inset:0; pointer-events:none; overflow:hidden; background-image:url('images/d0f8a964-4d94-4cbe-b446-187642cbcfe4.jpg'); background-repeat:no-repeat; background-position:center 34%; background-size:100% auto; opacity:0.14;"></div>
+
+  <!-- Cherry blossom petals -->
+  <div class="petal" style="position:absolute; left:7%; top:-50px; width:13px; height:10px; background:rgba(255,174,185,0.78); border-radius:50% 0 50% 0; animation:fall 7.2s 0.0s infinite linear, sway 3.4s 0.0s infinite ease-in-out; pointer-events:none; z-index:1;"></div>
+  <div class="petal" style="position:absolute; left:14%; top:-50px; width:10px; height:8px;  background:rgba(255,192,203,0.70); border-radius:0 50% 0 50%; animation:fall 8.5s 1.4s infinite linear, sway 4.2s 0.8s infinite ease-in-out; pointer-events:none; z-index:1;"></div>
+  <div class="petal" style="position:absolute; left:23%; top:-50px; width:14px; height:11px; background:rgba(255,160,178,0.64); border-radius:50% 0 50% 0; animation:fall 6.8s 0.6s infinite linear, sway 3.8s 0.5s infinite ease-in-out; pointer-events:none; z-index:1;"></div>
+  <div class="petal" style="position:absolute; left:36%; top:-50px; width:9px;  height:7px;  background:rgba(255,192,210,0.80); border-radius:0 50% 0 50%; animation:fall 9.2s 2.2s infinite linear, sway 5.0s 2.0s infinite ease-in-out; pointer-events:none; z-index:1;"></div>
+  <div class="petal" style="position:absolute; left:48%; top:-50px; width:12px; height:10px; background:rgba(255,174,188,0.70); border-radius:50% 0 50% 0; animation:fall 7.8s 0.9s infinite linear, sway 4.1s 1.6s infinite ease-in-out; pointer-events:none; z-index:1;"></div>
+  <div class="petal" style="position:absolute; left:60%; top:-50px; width:11px; height:9px;  background:rgba(255,182,193,0.75); border-radius:0 50% 0 50%; animation:fall 8.3s 3.2s infinite linear, sway 3.7s 0.3s infinite ease-in-out; pointer-events:none; z-index:1;"></div>
+  <div class="petal" style="position:absolute; left:70%; top:-50px; width:10px; height:8px;  background:rgba(255,160,175,0.65); border-radius:50% 0 50% 0; animation:fall 7.1s 1.9s infinite linear, sway 4.6s 2.4s infinite ease-in-out; pointer-events:none; z-index:1;"></div>
+  <div class="petal" style="position:absolute; left:80%; top:-50px; width:15px; height:12px; background:rgba(255,195,204,0.72); border-radius:0 50% 0 50%; animation:fall 6.2s 0.4s infinite linear, sway 3.2s 1.1s infinite ease-in-out; pointer-events:none; z-index:1;"></div>
+  <div class="petal" style="position:absolute; left:90%; top:-50px; width:10px; height:8px;  background:rgba(255,174,190,0.75); border-radius:50% 0 50% 0; animation:fall 8.7s 4.2s infinite linear, sway 4.9s 3.1s infinite ease-in-out; pointer-events:none; z-index:1;"></div>
+  <div class="petal" style="position:absolute; left:44%; top:-50px; width:11px; height:9px;  background:rgba(255,182,200,0.68); border-radius:0 50% 0 50%; animation:fall 9.8s 5.6s infinite linear, sway 3.5s 4.1s infinite ease-in-out; pointer-events:none; z-index:1;"></div>
+  <div class="petal" style="position:absolute; left:29%; top:-50px; width:8px;  height:7px;  background:rgba(255,200,212,0.65); border-radius:50% 0 50% 0; animation:fall 7.4s 2.9s infinite linear, sway 4.3s 1.9s infinite ease-in-out; pointer-events:none; z-index:1;"></div>
+  <div class="petal" style="position:absolute; left:54%; top:-50px; width:12px; height:9px;  background:rgba(255,174,185,0.70); border-radius:0 50% 0 50%; animation:fall 8.6s 1.6s infinite linear, sway 5.2s 1.2s infinite ease-in-out; pointer-events:none; z-index:1;"></div>
+
+  <!-- Hero content -->
+  <div class="hero-content" style="position:relative; z-index:10; text-align:center; padding:130px 48px 96px; max-width:940px; animation:fadeDown 1.0s ease both;">
+    <!-- Logo -->
+    <div class="hero-logo" style="margin:0 auto 34px; width:188px; height:188px; border-radius:50%; overflow:hidden; border:4px solid rgba(26,43,74,0.1); box-shadow:0 24px 64px rgba(26,43,74,0.18), 0 4px 16px rgba(26,43,74,0.08); animation:floatLogo 5s ease-in-out infinite;">
+      <img src="images/99eb590a-0f2b-47f9-a5e6-899c394089bd.png" alt="Hamke Tours" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+    <!-- Headline -->
+    <h1 style="font-family:'Montserrat',sans-serif; font-size:clamp(46px,7vw,86px); font-weight:900; color:#1A2B4A; line-height:1.02; letter-spacing:-2.5px; margin-bottom:22px; text-wrap:balance;">Descubre<br><em style="font-style:italic; color:#C85A3C;">Corea del Sur</em></h1>
+    <p style="font-size:clamp(15px,2vw,19px); color:rgba(26,43,74,0.62); font-weight:300; max-width:540px; margin:0 auto 44px; line-height:1.78;">Tour guiado en español con un venezolano-coreano que vive en el corazón de Seúl.</p>
+    <!-- CTAs -->
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <a href="#tours" style="background:#1A2B4A; color:#F2EDE3; text-decoration:none; font-size:13px; font-weight:700; letter-spacing:1.5px; padding:16px 36px; border-radius:2px; transition:background 0.22s, transform 0.22s;" style-hover="background:#2A3B6A; transform:translateY(-2px);">VER TOURS →</a>
+      <a href="https://www.instagram.com/hamketours" target="_blank" rel="noopener" style="background:transparent; color:#1A2B4A; text-decoration:none; font-size:13px; font-weight:700; letter-spacing:1.5px; padding:16px 36px; border-radius:2px; border:2px solid rgba(26,43,74,0.32); transition:border-color 0.22s, background 0.22s;" style-hover="border-color:#1A2B4A; background:rgba(26,43,74,0.04);">INSTAGRAM ↗</a>
+      <a href="https://www.youtube.com/@Chagabee" target="_blank" rel="noopener" style="background:transparent; color:#1A2B4A; text-decoration:none; font-size:13px; font-weight:700; letter-spacing:1.5px; padding:16px 36px; border-radius:2px; border:2px solid rgba(26,43,74,0.32); transition:border-color 0.22s, background 0.22s;" style-hover="border-color:#1A2B4A; background:rgba(26,43,74,0.04);">YOUTUBE ↗</a>
+    </div>
+    <!-- Hero stats -->
+    <div id="hero-stats" style="margin-top:56px;">
+      <div class="grid-stats" style="max-width:900px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:32px; text-align:center;">
+    <a href="https://www.youtube.com/@Chagabee" target="_blank" rel="noopener" style="text-decoration:none; display:block; transition:opacity 0.2s;" style-hover="opacity:0.8;">
+      <div class="hks-count" data-target="123" data-suffix="K" data-dec="0" style="font-family:'Montserrat',sans-serif; font-size:clamp(30px,4vw,48px); font-weight:900; color:#1A2B4A; line-height:1; letter-spacing:-2px;">123K<span style="font-size:0.42em; vertical-align:super; display:inline-block; margin-top:6px;">+</span></div>
+      <div style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:rgba(26,43,74,0.5); margin-top:10px; font-weight:600;">YouTube · @Chagabee</div>
+    </a>
+    <a href="https://www.instagram.com/comekimchi" target="_blank" rel="noopener" style="text-decoration:none; display:block; transition:opacity 0.2s;" style-hover="opacity:0.8;">
+      <div class="hks-count" data-target="222" data-suffix="K" data-dec="0" style="font-family:'Montserrat',sans-serif; font-size:clamp(30px,4vw,48px); font-weight:900; color:#1A2B4A; line-height:1; letter-spacing:-2px;">222K<span style="font-size:0.42em; vertical-align:super; display:inline-block; margin-top:6px;">+</span></div>
+      <div style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:rgba(26,43,74,0.5); margin-top:10px; font-weight:600;">Instagram · @comekimchi</div>
+    </a>
+    <a href="https://www.instagram.com/hamketours" target="_blank" rel="noopener" style="text-decoration:none; display:block; transition:opacity 0.2s;" style-hover="opacity:0.8;">
+      <div class="hks-count" data-target="54.5" data-suffix="K" data-dec="1" style="font-family:'Montserrat',sans-serif; font-size:clamp(30px,4vw,48px); font-weight:900; color:#1A2B4A; line-height:1; letter-spacing:-2px;">54.5K<span style="font-size:0.42em; vertical-align:super; display:inline-block; margin-top:6px;">+</span></div>
+      <div style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:rgba(26,43,74,0.5); margin-top:10px; font-weight:600;">Instagram · @hamketours</div>
+    </a>
+    <a href="https://www.tiktok.com/@comekimchi" target="_blank" rel="noopener" style="text-decoration:none; display:block; transition:opacity 0.2s;" style-hover="opacity:0.8;">
+      <div class="hks-count" data-target="80" data-suffix="K" data-dec="0" style="font-family:'Montserrat',sans-serif; font-size:clamp(30px,4vw,48px); font-weight:900; color:#1A2B4A; line-height:1; letter-spacing:-2px;">80K<span style="font-size:0.42em; vertical-align:super; display:inline-block; margin-top:6px;">+</span></div>
+      <div style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:rgba(26,43,74,0.5); margin-top:10px; font-weight:600;">TikTok · @comekimchi</div>
+    </a>
+  </div>
+  <div style="max-width:900px; margin:34px auto; height:1px; background:rgba(26,43,74,0.12);"></div>
+  <div class="grid-stats" style="max-width:900px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:32px; text-align:center;">
+    <div>
+      <div class="hks-count" data-target="300" data-suffix="" data-dec="0" style="font-family:'Montserrat',sans-serif; font-size:clamp(36px,4.5vw,56px); font-weight:900; color:#1A2B4A; line-height:1; letter-spacing:-2px;">300<span style="font-size:0.42em; vertical-align:super; display:inline-block; margin-top:6px;">+</span></div>
+      <div style="font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:rgba(26,43,74,0.5); margin-top:10px; font-weight:600;">Tours Realizados</div>
+    </div>
+    <div>
+      <div class="hks-count" data-target="15" data-suffix="" data-dec="0" style="font-family:'Montserrat',sans-serif; font-size:clamp(36px,4.5vw,56px); font-weight:900; color:#1A2B4A; line-height:1; letter-spacing:-2px;">15</div>
+      <div style="font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:rgba(26,43,74,0.5); margin-top:10px; font-weight:600;">Países de Origen</div>
+    </div>
+    <div>
+      <div class="hks-count" data-target="10" data-suffix="" data-dec="0" style="font-family:'Montserrat',sans-serif; font-size:clamp(36px,4.5vw,56px); font-weight:900; color:#1A2B4A; line-height:1; letter-spacing:-2px;">10<span style="font-size:0.42em; vertical-align:super; display:inline-block; margin-top:6px;">+</span></div>
+      <div style="font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:rgba(26,43,74,0.5); margin-top:10px; font-weight:600;">Años en Corea</div>
+    </div>
+    <div>
+      <div class="hks-count" data-target="3" data-suffix="" data-dec="0" style="font-family:'Montserrat',sans-serif; font-size:clamp(36px,4.5vw,56px); font-weight:900; color:#1A2B4A; line-height:1; letter-spacing:-2px;">3</div>
+      <div style="font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:rgba(26,43,74,0.5); margin-top:10px; font-weight:600;">Idiomas · ES / KR / EN</div>
+    </div>
+  </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOURS -->
+<section id="tours" class="section-pad" style="padding:110px 56px; background:#F2EDE3;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:68px; opacity:0; transform:translateY(30px); transition:opacity 0.8s ease, transform 0.8s ease;" data-fade="">
+      <p style="font-family:'Noto Serif KR',serif; font-size:12px; color:#C85A3C; letter-spacing:6px; text-transform:uppercase; margin-bottom:14px;"></p>
+      <h2 style="font-family:'Montserrat',sans-serif; font-size:clamp(30px,4vw,52px); font-weight:900; color:#1A2B4A; letter-spacing:-1.5px; line-height:1.08;">Mis Tours</h2>
+      <p style="margin-top:18px; font-size:16px; color:rgba(26,43,74,0.58); max-width:460px; margin-left:auto; margin-right:auto; line-height:1.75;">Experiencias diseñadas para hispanohablantes que quieren descubrir Corea de verdad.</p>
+    </div>
+    <div class="grid-tours" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:24px;">
+
+      <!-- Feature: 12-day package -->
+      <div style="grid-column:1 / -1; background:white; border-radius:3px; overflow:hidden; box-sizing:border-box; border:2px solid #C85A3C; box-shadow:0 6px 28px rgba(200,90,60,0.14); display:flex; flex-wrap:wrap; opacity:0; transform:translateY(30px); transition:opacity 0.8s ease, transform 0.8s ease;" data-fade="">
+        <div style="flex:1 1 460px; min-height:320px; position:relative; display:flex; gap:2px;">
+          <img src="images/42f84a2a-76f1-4cc7-a200-85ddc6b8b430.jpg" alt="Grupo Hamke Tours en Corea" style="flex:1; width:50%; height:100%; min-height:320px; object-fit:cover; object-position:center;">
+          <img src="images/2c7f40be-0661-4a9f-970e-a339be79bfa5.jpg" alt="Grupo Hamke Tours, mirador nocturno de Busan" style="flex:1; width:50%; height:100%; min-height:320px; object-fit:cover; object-position:center;">
+          <span style="position:absolute; top:18px; left:18px; background:#C85A3C; color:white; font-size:10px; font-weight:800; letter-spacing:1.5px; padding:5px 12px; border-radius:1px; text-transform:uppercase;">Seoul, Busan, Gyeongju, Suwon, and more</span>
+        </div>
+        <div style="flex:1 1 440px; padding:40px 42px; display:flex; flex-direction:column; justify-content:center;">
+          <p style="font-size:11px; color:#C85A3C; margin-bottom:8px; letter-spacing:0.8px; text-transform:uppercase; font-weight:700;">Paquete Completo</p>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:30px; font-weight:900; color:#1A2B4A; letter-spacing:-0.8px; line-height:1.05; margin-bottom:16px;">Tour Grupal Corea del Sur</h3>
+          <p style="font-size:14.5px; color:rgba(26,43,74,0.66); line-height:1.8; margin-bottom:26px;">Vive Corea del Sur sin preocuparte de nada. 12 días con hospedaje, guía personal, desayuno, transporte y todas las entradas incluidas: Torre Namsan, Lotte Tower, teleférico de Busan y hanbok en Gyeongbokgung. Y en cada parada, los sabores que definen Corea — Korean BBQ, tteokbokki, gimbap y street food de mercado.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+            <span style="font-size:15px; font-weight:700; color:rgba(26,43,74,0.66); letter-spacing:-0.2px;">12 DÍAS · TODO INCLUIDO</span>
+            <a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" style="background:#1A2B4A; color:white; text-decoration:none; font-size:12px; font-weight:700; letter-spacing:1.2px; padding:13px 30px; border-radius:2px; transition:background 0.2s;" style-hover="background:#2A3B6A;">RESERVAR →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour 1 -->
+      <div style="background:white; border-radius:3px; overflow:hidden; box-shadow:0 2px 20px rgba(26,43,74,0.07); opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.08s ease, transform 0.8s 0.08s ease;" data-fade="">
+        <div style="background:#1A2B4A; padding:28px 26px 22px; position:relative;">
+          <span style="position:absolute; top:18px; right:18px; background:#C85A3C; color:white; font-size:9px; font-weight:800; letter-spacing:1.5px; padding:4px 10px; border-radius:1px; text-transform:uppercase;">Más Popular</span>
+          <div style="font-size:34px; margin-bottom:10px;">🏯</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:800; color:white; letter-spacing:-0.3px;">Seoul Personalizado</h3>
+          <p style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px; letter-spacing:0.8px; text-transform:uppercase;">Tour Grupal en Español</p>
+        </div>
+        <div style="padding:22px 26px 26px;">
+          <p style="font-size:14px; color:rgba(26,43,74,0.66); line-height:1.78; margin-bottom:20px;">Tu Corea, a tu manera. Tú eliges qué ver, o déjate llevar por las recomendaciones de tu guía local.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:19px; font-weight:800; color:#1A2B4A; letter-spacing:-0.5px;">Desde $180</span>
+            <a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" style="background:#1A2B4A; color:white; text-decoration:none; font-size:11px; font-weight:700; letter-spacing:1.2px; padding:10px 18px; border-radius:2px; transition:background 0.2s;" style-hover="background:#2A3B6A;">RESERVAR →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour 2 -->
+      <div style="background:white; border-radius:3px; overflow:hidden; box-shadow:0 2px 20px rgba(26,43,74,0.07); opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.16s ease, transform 0.8s 0.16s ease;" data-fade="">
+        <div style="background:#1F5F7A; padding:28px 26px 22px; position:relative;">
+          <span style="position:absolute; top:18px; right:18px; background:#C85A3C; color:white; font-size:9px; font-weight:800; letter-spacing:1.5px; padding:4px 10px; border-radius:1px; text-transform:uppercase;">Más Popular</span>
+          <div style="font-size:34px; margin-bottom:10px;">🌊</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:800; color:white; letter-spacing:-0.3px;">Tour Busan</h3>
+          <p style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px; letter-spacing:0.8px; text-transform:uppercase;">La ciudad junto al mar</p>
+        </div>
+        <div style="padding:22px 26px 26px;">
+          <p style="font-size:14px; color:rgba(26,43,74,0.66); line-height:1.78; margin-bottom:20px;">Gamcheon Culture Village, Haeundae Beach, Templo Haedong — Busan, la ciudad que enamora con cada vista al mar.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:19px; font-weight:800; color:#1A2B4A; letter-spacing:-0.5px;">Desde $190</span>
+            <a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" style="background:#1F5F7A; color:white; text-decoration:none; font-size:11px; font-weight:700; letter-spacing:1.2px; padding:10px 18px; border-radius:2px; transition:background 0.2s;" style-hover="background:#2A6A8A;">RESERVAR →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour 3 -->
+      <div style="background:white; border-radius:3px; overflow:hidden; box-shadow:0 2px 20px rgba(26,43,74,0.07); opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.24s ease, transform 0.8s 0.24s ease;" data-fade="">
+        <div style="background:#B24E35; padding:28px 26px 22px; position:relative;">
+          <span style="position:absolute; top:18px; right:18px; background:rgba(0,0,0,0.2); color:white; font-size:9px; font-weight:800; letter-spacing:1.5px; padding:4px 10px; border-radius:1px; text-transform:uppercase;">Exclusivo</span>
+          <div style="font-size:34px; margin-bottom:10px;">🪖</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:800; color:white; letter-spacing:-0.3px;">Tour DMZ</h3>
+          <p style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px; letter-spacing:0.8px; text-transform:uppercase;">Frontera con Corea del Norte</p>
+        </div>
+        <div style="padding:22px 26px 26px;">
+          <p style="font-size:14px; color:rgba(26,43,74,0.66); line-height:1.78; margin-bottom:20px;">Visita la zona desmilitarizada más famosa del mundo. Historia, tensión y reflexión en un viaje que no olvidarás jamás.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:19px; font-weight:800; color:#1A2B4A; letter-spacing:-0.5px;">Desde $270</span>
+            <a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" style="background:#B24E35; color:white; text-decoration:none; font-size:11px; font-weight:700; letter-spacing:1.2px; padding:10px 18px; border-radius:2px; transition:background 0.2s;" style-hover="background:#C85A3C;">RESERVAR →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour 4 -->
+      <div style="background:white; border-radius:3px; overflow:hidden; box-shadow:0 2px 20px rgba(26,43,74,0.07); opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.08s ease, transform 0.8s 0.08s ease;" data-fade="">
+        <div style="background:#5A3D78; padding:28px 26px 22px; position:relative;">
+          <span style="position:absolute; top:18px; right:18px; background:rgba(255,255,255,0.15); color:white; font-size:9px; font-weight:800; letter-spacing:1.5px; padding:4px 10px; border-radius:1px; text-transform:uppercase;">K-Culture</span>
+          <div style="font-size:34px; margin-bottom:10px;">💜</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:800; color:white; letter-spacing:-0.3px;">Seoul Nocturno</h3>
+          <p style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px; letter-spacing:0.8px; text-transform:uppercase;">Vive tus series favoritas</p>
+        </div>
+        <div style="padding:22px 26px 26px;">
+          <p style="font-size:14px; color:rgba(26,43,74,0.66); line-height:1.78; margin-bottom:20px;">Conoce la ciudad de noche. Vive el contraste de la vida nocturna de Seúl, del bullicio de Itaewon a las vistas desde las alturas.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:19px; font-weight:800; color:#1A2B4A; letter-spacing:-0.5px;">Desde $140</span>
+            <a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" style="background:#5A3D78; color:white; text-decoration:none; font-size:11px; font-weight:700; letter-spacing:1.2px; padding:10px 18px; border-radius:2px; transition:background 0.2s;" style-hover="background:#6A4D88;">RESERVAR →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour 5 -->
+      <div style="background:white; border-radius:3px; overflow:hidden; box-shadow:0 2px 20px rgba(26,43,74,0.07); opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.16s ease, transform 0.8s 0.16s ease;" data-fade="">
+        <div style="background:#3D6B52; padding:28px 26px 22px; position:relative;">
+          <span style="position:absolute; top:18px; right:18px; background:rgba(255,255,255,0.18); color:white; font-size:9px; font-weight:800; letter-spacing:1.5px; padding:4px 10px; border-radius:1px; text-transform:uppercase;">Un Día</span>
+          <div style="font-size:34px; margin-bottom:10px;">🍂</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:800; color:white; letter-spacing:-0.3px;">Nami Island</h3>
+          <p style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px; letter-spacing:0.8px; text-transform:uppercase;">Petite France · Italy Village</p>
+        </div>
+        <div style="padding:22px 26px 26px;">
+          <p style="font-size:14px; color:rgba(26,43,74,0.66); line-height:1.78; margin-bottom:20px;">El escenario mágico de los k-dramas más famosos. Bosques de otoño y vistas de película en un solo día desde Seúl.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:19px; font-weight:800; color:#1A2B4A; letter-spacing:-0.5px;">Desde $250</span>
+            <a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" style="background:#3D6B52; color:white; text-decoration:none; font-size:11px; font-weight:700; letter-spacing:1.2px; padding:10px 18px; border-radius:2px; transition:background 0.2s;" style-hover="background:#4A7A5C;">RESERVAR →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour 6: Suwon -->
+      <div style="background:white; border-radius:3px; overflow:hidden; box-shadow:0 2px 20px rgba(26,43,74,0.07); opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.24s ease, transform 0.8s 0.24s ease;" data-fade="">
+        <div style="background:#7A6A3A; padding:28px 26px 22px; position:relative;">
+          <span style="position:absolute; top:18px; right:18px; background:rgba(255,255,255,0.15); color:white; font-size:9px; font-weight:800; letter-spacing:1.5px; padding:4px 10px; border-radius:1px; text-transform:uppercase;">Patrimonio</span>
+          <div style="font-size:34px; margin-bottom:10px;">🏰</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:800; color:white; letter-spacing:-0.3px;">Tour Suwon</h3>
+          <p style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px; letter-spacing:0.8px; text-transform:uppercase;">Fortaleza Hwaseong · UNESCO</p>
+        </div>
+        <div style="padding:22px 26px 26px;">
+          <p style="font-size:14px; color:rgba(26,43,74,0.66); line-height:1.78; margin-bottom:20px;">La imponente Fortaleza Hwaseong, Patrimonio de la Humanidad UNESCO. Historia real de Corea a 30 minutos de Seúl.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:19px; font-weight:800; color:#1A2B4A; letter-spacing:-0.5px;">Desde $190</span>
+            <a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" style="background:#7A6A3A; color:white; text-decoration:none; font-size:11px; font-weight:700; letter-spacing:1.2px; padding:10px 18px; border-radius:2px; transition:background 0.2s;" style-hover="background:#8A7A4A;">RESERVAR →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour 7 -->
+      <div style="background:white; border-radius:3px; overflow:hidden; box-shadow:0 2px 20px rgba(26,43,74,0.07); opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.4s ease, transform 0.8s 0.4s ease;" data-fade="">
+        <div style="background:#6E2C3B; padding:28px 26px 22px; position:relative;">
+          <span style="position:absolute; top:18px; right:18px; background:rgba(0,0,0,0.25); color:white; font-size:9px; font-weight:800; letter-spacing:1.5px; padding:4px 10px; border-radius:1px; text-transform:uppercase;">Historia</span>
+          <div style="font-size:34px; margin-bottom:10px;">👑</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:800; color:white; letter-spacing:-0.3px;">Seoul Histórico</h3>
+          <p style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px; letter-spacing:0.8px; text-transform:uppercase;">Palacios y Dinastía Joseon</p>
+        </div>
+        <div style="padding:22px 26px 26px;">
+          <p style="font-size:14px; color:rgba(26,43,74,0.66); line-height:1.78; margin-bottom:20px;">Visita el palacio Gyeongbokgung vistiendo hanbok, y conoce los barrios tradicionales coreanos y templos budistas.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:19px; font-weight:800; color:#1A2B4A; letter-spacing:-0.5px;">Desde $180</span>
+            <a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" style="background:#6E2C3B; color:white; text-decoration:none; font-size:11px; font-weight:700; letter-spacing:1.2px; padding:10px 18px; border-radius:2px; transition:background 0.2s;" style-hover="background:#85374A;">RESERVAR →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour 8 -->
+      <div style="background:white; border-radius:3px; overflow:hidden; box-shadow:0 2px 20px rgba(26,43,74,0.07); opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.48s ease, transform 0.8s 0.48s ease;" data-fade="">
+        <div style="background:#34406B; padding:28px 26px 22px; position:relative;">
+          <span style="position:absolute; top:18px; right:18px; background:rgba(0,0,0,0.25); color:white; font-size:9px; font-weight:800; letter-spacing:1.5px; padding:4px 10px; border-radius:1px; text-transform:uppercase;">Moderno</span>
+          <div style="font-size:34px; margin-bottom:10px;">🏙️</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:800; color:white; letter-spacing:-0.3px;">Seoul Moderno</h3>
+          <p style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px; letter-spacing:0.8px; text-transform:uppercase;">Gangnam · DDP · Skyline</p>
+        </div>
+        <div style="padding:22px 26px 26px;">
+          <p style="font-size:14px; color:rgba(26,43,74,0.66); line-height:1.78; margin-bottom:20px;">Rascacielos, arquitectura futurista y los barrios más vibrantes: Gangnam, COEX y la Starfield Library.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:19px; font-weight:800; color:#1A2B4A; letter-spacing:-0.5px;">Desde $180</span>
+            <a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" style="background:#34406B; color:white; text-decoration:none; font-size:11px; font-weight:700; letter-spacing:1.2px; padding:10px 18px; border-radius:2px; transition:background 0.2s;" style-hover="background:#44508B;">RESERVAR →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour 9 -->
+      <div style="background:white; border-radius:3px; overflow:hidden; box-shadow:0 2px 20px rgba(26,43,74,0.07); opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.56s ease, transform 0.8s 0.56s ease;" data-fade="">
+        <div style="background:#6B2D8A; padding:28px 26px 22px; position:relative;">
+          <span style="position:absolute; top:18px; right:18px; background:rgba(0,0,0,0.25); color:white; font-size:9px; font-weight:800; letter-spacing:1.5px; padding:4px 10px; border-radius:1px; text-transform:uppercase;">K-Pop</span>
+          <div style="font-size:34px; margin-bottom:10px;">🎤</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:800; color:white; letter-spacing:-0.3px;">Tour BTS</h3>
+          <p style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px; letter-spacing:0.8px; text-transform:uppercase;">Ruta ARMY en Seúl</p>
+        </div>
+        <div style="padding:22px 26px 26px;">
+          <p style="font-size:14px; color:rgba(26,43,74,0.66); line-height:1.78; margin-bottom:20px;">HYBE, cafés temáticos y los rincones que todo ARMY quiere ver. Sigue los pasos de BTS por la ciudad.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:19px; font-weight:800; color:#1A2B4A; letter-spacing:-0.5px;">Desde $180</span>
+            <a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" style="background:#6B2D8A; color:white; text-decoration:none; font-size:11px; font-weight:700; letter-spacing:1.2px; padding:10px 18px; border-radius:2px; transition:background 0.2s;" style-hover="background:#7E3BA0;">RESERVAR →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour 10 -->
+      <div style="background:white; border-radius:3px; overflow:hidden; box-shadow:0 2px 20px rgba(26,43,74,0.07); opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.64s ease, transform 0.8s 0.64s ease;" data-fade="">
+        <div style="background:#1F5F73; padding:28px 26px 22px; position:relative;">
+          <span style="position:absolute; top:18px; right:18px; background:rgba(0,0,0,0.25); color:white; font-size:9px; font-weight:800; letter-spacing:1.5px; padding:4px 10px; border-radius:1px; text-transform:uppercase;">Isla</span>
+          <div style="font-size:34px; margin-bottom:10px;">🌋</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:800; color:white; letter-spacing:-0.3px;">Jeju Island</h3>
+          <p style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px; letter-spacing:0.8px; text-transform:uppercase;">Volcán · Cascadas · Playas</p>
+        </div>
+        <div style="padding:22px 26px 26px;">
+          <p style="font-size:14px; color:rgba(26,43,74,0.66); line-height:1.78; margin-bottom:20px;">El monte Hallasan, cascadas, playas de arena negra y campos de flores. La isla más relajada de Corea en un viaje completo.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:19px; font-weight:800; color:#1A2B4A; letter-spacing:-0.5px;">Desde $200</span>
+            <a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" style="background:#1F5F73; color:white; text-decoration:none; font-size:11px; font-weight:700; letter-spacing:1.2px; padding:10px 18px; border-radius:2px; transition:background 0.2s;" style-hover="background:#2A7089;">RESERVAR →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour 11 -->
+      <div style="background:white; border-radius:3px; overflow:hidden; box-shadow:0 2px 20px rgba(26,43,74,0.07); opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.72s ease, transform 0.8s 0.72s ease;" data-fade="">
+        <div style="background:#7A5A2A; padding:28px 26px 22px; position:relative;">
+          <span style="position:absolute; top:18px; right:18px; background:rgba(0,0,0,0.25); color:white; font-size:9px; font-weight:800; letter-spacing:1.5px; padding:4px 10px; border-radius:1px; text-transform:uppercase;">Patrimonio</span>
+          <div style="font-size:34px; margin-bottom:10px;">🏯</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:800; color:white; letter-spacing:-0.3px;">Gyeongju</h3>
+          <p style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px; letter-spacing:0.8px; text-transform:uppercase;">Capital Milenaria de Silla</p>
+        </div>
+        <div style="padding:22px 26px 26px;">
+          <p style="font-size:14px; color:rgba(26,43,74,0.66); line-height:1.78; margin-bottom:20px;">Túmulos reales, el templo Bulguksa y los barrios de casas tradicionales. La antigua capital de Silla, un museo al aire libre Patrimonio UNESCO.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:19px; font-weight:800; color:#1A2B4A; letter-spacing:-0.5px;">Desde $230</span>
+            <a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" style="background:#7A5A2A; color:white; text-decoration:none; font-size:11px; font-weight:700; letter-spacing:1.2px; padding:10px 18px; border-radius:2px; transition:background 0.2s;" style-hover="background:#93703A;">RESERVAR →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour 12 -->
+      <div style="background:white; border-radius:3px; overflow:hidden; box-shadow:0 2px 20px rgba(26,43,74,0.07); opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.8s ease, transform 0.8s 0.8s ease;" data-fade="">
+        <div style="background:#2E4A5C; padding:28px 26px 22px; position:relative;">
+          <span style="position:absolute; top:18px; right:18px; background:rgba(0,0,0,0.25); color:white; font-size:9px; font-weight:800; letter-spacing:1.5px; padding:4px 10px; border-radius:1px; text-transform:uppercase;">Traslado</span>
+          <div style="font-size:34px; margin-bottom:10px;">🚐</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:800; color:white; letter-spacing:-0.3px;">Transporte Aeropuerto</h3>
+          <p style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px; letter-spacing:0.8px; text-transform:uppercase;">Incheon · Gimpo ↔ Seúl</p>
+        </div>
+        <div style="padding:22px 26px 26px;">
+          <p style="font-size:14px; color:rgba(26,43,74,0.66); line-height:1.78; margin-bottom:20px;">Aterriza sin estrés. Un chofer privado te espera para llevarte directo a tu alojamiento en Seúl — cómodo y sin esperas, en aproximadamente 1 hora y media.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:19px; font-weight:800; color:#1A2B4A; letter-spacing:-0.5px;">Desde $90</span>
+            <a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" style="background:#2E4A5C; color:white; text-decoration:none; font-size:11px; font-weight:700; letter-spacing:1.2px; padding:10px 18px; border-radius:2px; transition:background 0.2s;" style-hover="background:#3C5F74;">RESERVAR →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section-pad" style="padding:110px 56px; background:white;">
+  <div class="grid-about" style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center;">
+    <!-- Image side -->
+    <div style="position:relative; opacity:0; transform:translateY(30px); transition:opacity 0.9s ease, transform 0.9s ease;" data-fade="">
+      <div style="aspect-ratio:4/5; border-radius:18px; overflow:hidden; box-shadow:0 24px 60px rgba(26,43,74,0.20);">
+        <img src="images/ce26e4af-8042-40bb-90f2-0954e9ba3c1a.jpg" alt="Hamke Tours — Chagabe y sus grupos en Corea" style="width:100%; height:100%; object-fit:cover; display:block;">
+      </div>
+    </div>
+    <!-- Text side -->
+    <div style="opacity:0; transform:translateY(30px); transition:opacity 0.9s 0.15s ease, transform 0.9s 0.15s ease;" data-fade="">
+      <p style="font-family:'Noto Serif KR',serif; font-size:12px; color:#C85A3C; letter-spacing:6px; text-transform:uppercase; margin-bottom:14px;"></p>
+      <h2 style="font-family:'Montserrat',sans-serif; font-size:clamp(26px,3.5vw,44px); font-weight:900; color:#1A2B4A; letter-spacing:-1px; line-height:1.08; margin-bottom:26px;">¿Quién<br>soy?</h2>
+      <p style="font-size:15px; color:rgba(26,43,74,0.68); line-height:1.87; margin-bottom:18px;">Soy Chang Lee (<a href="https://www.instagram.com/comekimchi" target="_blank" rel="noopener" style="color:#C85A3C; text-decoration:none; font-weight:600;">@comekimchi</a>), youtuber (<a href="https://www.youtube.com/@Chagabee" target="_blank" rel="noopener" style="color:#C85A3C; text-decoration:none; font-weight:600;">@chagabe</a>) y guía turístico (<a href="https://www.instagram.com/hamketours" target="_blank" rel="noopener" style="color:#C85A3C; text-decoration:none; font-weight:600;">@hamketours</a>) venezolano de padre coreano, viviendo en Seúl desde hace más de 10 años. Conocer Corea desde adentro — su idioma, su cultura y sus secretos — es lo que me permite ofrecerte algo que ninguna agencia puede darte.</p>
+      <p style="font-size:15px; color:rgba(26,43,74,0.68); line-height:1.87; margin-bottom:36px;">Mis tours son pequeños, personalizados y 100% en español. No soy una agencia masiva — soy tu <em>amigo coreano-venezolano en Corea</em>.</p>
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:flex-start; gap:14px;">
+          <div style="width:38px; height:38px; background:#F2EDE3; border-radius:2px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:16px;">🗣️</div>
+          <div>
+            <div style="font-weight:700; font-size:14px; color:#1A2B4A; margin-bottom:2px;">100% en Español</div>
+            <div style="font-size:13px; color:rgba(26,43,74,0.56); line-height:1.5;">Guía nativo hispanohablante, sin barreras de idioma.</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:flex-start; gap:14px;">
+          <div style="width:38px; height:38px; background:#F2EDE3; border-radius:2px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:16px;">👥</div>
+          <div>
+            <div style="font-weight:700; font-size:14px; color:#1A2B4A; margin-bottom:2px;">Grupos Pequeños</div>
+            <div style="font-size:13px; color:rgba(26,43,74,0.56); line-height:1.5;">Experiencias íntimas y personalizadas, no tours masivos.</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:flex-start; gap:14px;">
+          <div style="width:38px; height:38px; background:#F2EDE3; border-radius:2px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:16px;">📍</div>
+          <div>
+            <div style="font-weight:700; font-size:14px; color:#1A2B4A; margin-bottom:2px;">Conocimiento Local</div>
+            <div style="font-size:13px; color:rgba(26,43,74,0.56); line-height:1.5;">Lugares secretos que ninguna guía turística menciona.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCES -->
+<section id="experiences" class="section-pad" style="padding:110px 56px; background:#1A2B4A; position:relative; overflow:hidden;">
+  <span style="position:absolute; top:-30px; right:-50px; font-family:'Noto Serif KR',serif; font-size:320px; color:rgba(255,255,255,0.026); font-weight:700; pointer-events:none; user-select:none; line-height:1;">한</span>
+  <span style="position:absolute; bottom:-60px; left:-30px; font-family:'Noto Serif KR',serif; font-size:240px; color:rgba(255,255,255,0.018); font-weight:700; pointer-events:none; user-select:none; line-height:1;">국</span>
+  <div style="max-width:1200px; margin:0 auto; position:relative; z-index:1;">
+    <div style="text-align:center; margin-bottom:68px; opacity:0; transform:translateY(30px); transition:opacity 0.8s ease, transform 0.8s ease;" data-fade="">
+      <p style="font-family:'Noto Serif KR',serif; font-size:12px; color:rgba(255,174,185,0.72); letter-spacing:6px; text-transform:uppercase; margin-bottom:14px;"></p>
+      <h2 style="font-family:'Montserrat',sans-serif; font-size:clamp(30px,4vw,52px); font-weight:900; color:white; letter-spacing:-1.5px; line-height:1.08;">Lo que Vivirás</h2>
+      <p style="margin-top:18px; font-size:16px; color:rgba(255,255,255,0.48); max-width:440px; margin-left:auto; margin-right:auto; line-height:1.75;">Corea es cultura milenaria, sabores únicos y belleza natural en cada estación del año.</p>
+    </div>
+    <div class="grid-exp" style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px;">
+      <div style="background:rgba(255,255,255,0.055); border:1px solid rgba(255,255,255,0.08); border-radius:3px; padding:32px 22px; text-align:center; opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.08s ease, transform 0.8s 0.08s ease;" data-fade="">
+        <div style="font-size:44px; margin-bottom:18px;">👘</div>
+        <h3 style="font-family:'Montserrat',sans-serif; font-size:17px; font-weight:700; color:white; margin-bottom:10px;">Historia Coreana</h3>
+        <p style="font-size:13px; color:rgba(255,255,255,0.48); line-height:1.72;">Vístete con el traje tradicional y explora palacios históricos como auténtica realeza.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.055); border:1px solid rgba(255,255,255,0.08); border-radius:3px; padding:32px 22px; text-align:center; opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.16s ease, transform 0.8s 0.16s ease;" data-fade="">
+        <div style="font-size:44px; margin-bottom:18px;">🎤</div>
+        <h3 style="font-family:'Montserrat',sans-serif; font-size:17px; font-weight:700; color:white; margin-bottom:10px;">K-Pop y K-Dramas</h3>
+        <p style="font-size:13px; color:rgba(255,255,255,0.48); line-height:1.72;">Agencias, cafés de idols y merch oficial en Hongdae y Gangnam. El paraíso fan.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.055); border:1px solid rgba(255,255,255,0.08); border-radius:3px; padding:32px 22px; text-align:center; opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.24s ease, transform 0.8s 0.24s ease;" data-fade="">
+        <div style="font-size:44px; margin-bottom:18px;">🍜</div>
+        <h3 style="font-family:'Montserrat',sans-serif; font-size:17px; font-weight:700; color:white; margin-bottom:10px;">Gastronomía</h3>
+        <p style="font-size:13px; color:rgba(255,255,255,0.48); line-height:1.72;">Ramen, Korean BBQ, Tteokbokki... sabores que cambiarán tu vida para siempre.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.055); border:1px solid rgba(255,255,255,0.08); border-radius:3px; padding:32px 22px; text-align:center; opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.32s ease, transform 0.8s 0.32s ease;" data-fade="">
+        <div style="font-size:44px; margin-bottom:18px;">🌸</div>
+        <h3 style="font-family:'Montserrat',sans-serif; font-size:17px; font-weight:700; color:white; margin-bottom:10px;">Naturaleza</h3>
+        <p style="font-size:13px; color:rgba(255,255,255,0.48); line-height:1.72;">Cerezos en flor, hojas otoñales, montañas nevadas — hermosa en cada estación.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FUN FACTS -->
+<section class="section-pad" style="padding:96px 56px; background:white;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <p style="text-align:center; font-family:'Noto Serif KR',serif; font-size:12px; color:#C85A3C; letter-spacing:6px; text-transform:uppercase; margin-bottom:44px; opacity:0; transform:translateY(20px); transition:opacity 0.7s ease, transform 0.7s ease;" data-fade="">¿Sabías que...?</p>
+    <div class="hkf-grid">
+      <div style="opacity:0; transform:translateY(28px); transition:opacity 0.8s 0.05s ease, transform 0.8s 0.05s ease;" data-fade="">
+        <div class="hkf-tile" style="background:rgba(42,106,138,0.08); padding:24px 22px 26px; border-radius:16px; border:1px solid rgba(26,43,74,0.05); box-shadow:0 1px 3px rgba(26,43,74,0.04);">
+          <div style="width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:22px; background:#2A6A8A; margin-bottom:16px;">🌐</div>
+          <p style="font-size:13.5px; color:#1A2B4A; line-height:1.55; font-weight:500;">Corea del Sur tiene una de las velocidades de internet más rápidas del mundo.</p>
+        </div>
+      </div>
+      <div style="opacity:0; transform:translateY(28px); transition:opacity 0.8s 0.11s ease, transform 0.8s 0.11s ease;" data-fade="">
+        <div class="hkf-tile" style="background:rgba(200,90,60,0.08); padding:24px 22px 26px; border-radius:16px; border:1px solid rgba(26,43,74,0.05); box-shadow:0 1px 3px rgba(26,43,74,0.04);">
+          <div style="width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:22px; background:#C85A3C; margin-bottom:16px;">🥬</div>
+          <p style="font-size:13.5px; color:#1A2B4A; line-height:1.55; font-weight:500;">El kimchi es Patrimonio Cultural Inmaterial de la UNESCO desde 2013.</p>
+        </div>
+      </div>
+      <div style="opacity:0; transform:translateY(28px); transition:opacity 0.8s 0.17s ease, transform 0.8s 0.17s ease;" data-fade="">
+        <div class="hkf-tile" style="background:rgba(61,107,82,0.08); padding:24px 22px 26px; border-radius:16px; border:1px solid rgba(26,43,74,0.05); box-shadow:0 1px 3px rgba(26,43,74,0.04);">
+          <div style="width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:22px; background:#3D6B52; margin-bottom:16px;">✍️</div>
+          <p style="font-size:13.5px; color:#1A2B4A; line-height:1.55; font-weight:500;">El Hangul fue inventado por el Rey Sejong en 1443, uno de los alfabetos más lógicos del mundo.</p>
+        </div>
+      </div>
+      <div style="opacity:0; transform:translateY(28px); transition:opacity 0.8s 0.23s ease, transform 0.8s 0.23s ease;" data-fade="">
+        <div class="hkf-tile" style="background:rgba(90,61,120,0.08); padding:24px 22px 26px; border-radius:16px; border:1px solid rgba(26,43,74,0.05); box-shadow:0 1px 3px rgba(26,43,74,0.04);">
+          <div style="width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:22px; background:#5A3D78; margin-bottom:16px;">🎬</div>
+          <p style="font-size:13.5px; color:#1A2B4A; line-height:1.55; font-weight:500;">"Parasite" (2019) fue el primer film no anglófono en ganar el Óscar a Mejor Película.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TESTIMONIALS -->
+<section class="section-pad" style="padding:110px 56px; background:#F2EDE3;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:68px; opacity:0; transform:translateY(30px); transition:opacity 0.8s ease, transform 0.8s ease;" data-fade="">
+      <p style="font-family:'Noto Serif KR',serif; font-size:12px; color:#C85A3C; letter-spacing:6px; text-transform:uppercase; margin-bottom:14px;"></p>
+      <h2 style="font-family:'Montserrat',sans-serif; font-size:clamp(30px,4vw,52px); font-weight:900; color:#1A2B4A; letter-spacing:-1.5px;">Reseñas</h2>
+    </div>
+    <div class="hkr-wall" style="display:flex; flex-wrap:wrap; gap:16px; align-items:flex-start;">
+      <div style="flex:1 1 250px; background:white; border-radius:3px; box-shadow:0 3px 20px rgba(26,43,74,0.06); padding:20px; display:flex; gap:12px; opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.08s ease, transform 0.8s 0.08s ease;" data-fade=""><div style="flex:0 0 44px; width:44px; height:44px; border-radius:50%; overflow:hidden;"><img src="images/366e3df0-252f-44a0-b7bb-c00c63846543.png" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;"><span style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:#1A2B4A;">a_bosch86</span><span style="font-size:12.5px; color:rgba(26,43,74,0.45);">8w</span></div><div style="font-family:'Montserrat',sans-serif; font-size:13.5px; line-height:1.55; color:rgba(26,43,74,0.74);">Lo mejor de <span style="color:#C85A3C; font-weight:600;">@comekimchi</span> es que lo mismo hace de fotógrafo, de modelo, de cantante, baila…él se presta para todo 🙌🙌🙌🙌🙌🙌</div></div><div style="flex:0 0 auto; display:flex; flex-direction:column; align-items:center; gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="#C85A3C" stroke-width="1.7" style="width:16px;height:16px;display:block;"><path d="M12 21s-7.5-4.9-9.7-9C.8 8.6 2.3 5 5.7 5c2 0 3.4 1.2 4.3 2.6C10.9 6.2 12.3 5 14.3 5c3.4 0 4.9 3.6 3.4 7-2.2 4.1-9.7 9-9.7 9z" transform="translate(-.3 -1)"/></svg><span style="font-size:12px; color:rgba(26,43,74,0.45);">28</span></div></div>
+      <div style="flex:1 1 250px; background:white; border-radius:3px; box-shadow:0 3px 20px rgba(26,43,74,0.06); padding:20px; display:flex; gap:12px; opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.14s ease, transform 0.8s 0.14s ease;" data-fade=""><div style="flex:0 0 44px; width:44px; height:44px; border-radius:50%; overflow:hidden;"><img src="images/d96a99cb-0208-47b2-b4c4-38f7c1068fbf.png" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;"><span style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:#1A2B4A;">ady_20_</span><span style="font-size:12.5px; color:rgba(26,43,74,0.45);">10w</span></div><div style="font-family:'Montserrat',sans-serif; font-size:13.5px; line-height:1.55; color:rgba(26,43,74,0.74);">Tienen el mejor guia <span style="color:#C85A3C; font-weight:600;">@comekimchi</span>… será una experiencia inolvidable … disfruten a lo grande 👏👏👏👏👏👏</div></div><div style="flex:0 0 auto; display:flex; flex-direction:column; align-items:center; gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="#C85A3C" stroke-width="1.7" style="width:16px;height:16px;display:block;"><path d="M12 21s-7.5-4.9-9.7-9C.8 8.6 2.3 5 5.7 5c2 0 3.4 1.2 4.3 2.6C10.9 6.2 12.3 5 14.3 5c3.4 0 4.9 3.6 3.4 7-2.2 4.1-9.7 9-9.7 9z" transform="translate(-.3 -1)"/></svg><span style="font-size:12px; color:rgba(26,43,74,0.45);">3</span></div></div>
+      <div style="flex:1 1 250px; background:white; border-radius:3px; box-shadow:0 3px 20px rgba(26,43,74,0.06); padding:20px; display:flex; gap:12px; opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.2s ease, transform 0.8s 0.2s ease;" data-fade=""><div style="flex:0 0 44px; width:44px; height:44px; border-radius:50%; overflow:hidden;"><img src="images/b2e56a04-55d4-456c-b580-4a3c0d4990a4.png" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;"><span style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:#1A2B4A;">coreadecerca</span><span style="font-size:12.5px; color:rgba(26,43,74,0.45);">9w</span></div><div style="font-family:'Montserrat',sans-serif; font-size:13.5px; line-height:1.55; color:rgba(26,43,74,0.74);">la estamos pasando increíble, no se pierda el tours si deseas conocer Korea….. con <span style="color:#C85A3C; font-weight:600;">@hamketours</span> la pasarás super</div></div><div style="flex:0 0 auto; display:flex; flex-direction:column; align-items:center; gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="#C85A3C" stroke-width="1.7" style="width:16px;height:16px;display:block;"><path d="M12 21s-7.5-4.9-9.7-9C.8 8.6 2.3 5 5.7 5c2 0 3.4 1.2 4.3 2.6C10.9 6.2 12.3 5 14.3 5c3.4 0 4.9 3.6 3.4 7-2.2 4.1-9.7 9-9.7 9z" transform="translate(-.3 -1)"/></svg></div></div>
+      <div style="flex:1 1 250px; background:white; border-radius:3px; box-shadow:0 3px 20px rgba(26,43,74,0.06); padding:20px; display:flex; gap:12px; opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.26s ease, transform 0.8s 0.26s ease;" data-fade=""><div style="flex:0 0 44px; width:44px; height:44px; border-radius:50%; overflow:hidden;"><img src="images/368f5034-bc52-4b87-812b-b35309340d10.png" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;"><span style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:#1A2B4A;">venegas.m.barbara</span><span style="font-size:12.5px; color:rgba(26,43,74,0.45);">2w</span></div><div style="font-family:'Montserrat',sans-serif; font-size:13.5px; line-height:1.55; color:rgba(26,43,74,0.74);">Maravilloso viaje!! Me llevo hermosos recuerdos de corea y la gente de este tour, gracias por todo Chang!!</div></div><div style="flex:0 0 auto; display:flex; flex-direction:column; align-items:center; gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="#C85A3C" stroke-width="1.7" style="width:16px;height:16px;display:block;"><path d="M12 21s-7.5-4.9-9.7-9C.8 8.6 2.3 5 5.7 5c2 0 3.4 1.2 4.3 2.6C10.9 6.2 12.3 5 14.3 5c3.4 0 4.9 3.6 3.4 7-2.2 4.1-9.7 9-9.7 9z" transform="translate(-.3 -1)"/></svg><span style="font-size:12px; color:rgba(26,43,74,0.45);">3</span></div></div>
+      <div style="flex:1 1 250px; background:white; border-radius:3px; box-shadow:0 3px 20px rgba(26,43,74,0.06); padding:20px; display:flex; gap:12px; opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.32s ease, transform 0.8s 0.32s ease;" data-fade=""><div style="flex:0 0 44px; width:44px; height:44px; border-radius:50%; overflow:hidden;"><img src="images/0b696c85-f087-4cea-affc-a09a43ec9599.png" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;"><span style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:#1A2B4A;">neitzagh</span><span style="font-size:12.5px; color:rgba(26,43,74,0.45);">9w</span></div><div style="font-family:'Montserrat',sans-serif; font-size:13.5px; line-height:1.55; color:rgba(26,43,74,0.74);">Fuimos con Chang a esas escaleras durante el primer tour y es espectacular. Una vista hermosa. Súper recomendado. A <span style="color:#C85A3C; font-weight:600;">@comekimchi</span> le da mucho miedo esas alturas 😂</div></div><div style="flex:0 0 auto; display:flex; flex-direction:column; align-items:center; gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="#C85A3C" stroke-width="1.7" style="width:16px;height:16px;display:block;"><path d="M12 21s-7.5-4.9-9.7-9C.8 8.6 2.3 5 5.7 5c2 0 3.4 1.2 4.3 2.6C10.9 6.2 12.3 5 14.3 5c3.4 0 4.9 3.6 3.4 7-2.2 4.1-9.7 9-9.7 9z" transform="translate(-.3 -1)"/></svg><span style="font-size:12px; color:rgba(26,43,74,0.45);">2</span></div></div>
+      <div style="flex:1 1 250px; background:white; border-radius:3px; box-shadow:0 3px 20px rgba(26,43,74,0.06); padding:20px; display:flex; gap:12px; opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.38s ease, transform 0.8s 0.38s ease;" data-fade=""><div style="flex:0 0 44px; width:44px; height:44px; border-radius:50%; overflow:hidden;"><img src="images/2ef6dd81-1847-4bee-8362-fbc7f8a4564a.png" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;"><span style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:#1A2B4A;">aniskianiski</span><span style="font-size:12.5px; color:rgba(26,43,74,0.45);">8w</span></div><div style="font-family:'Montserrat',sans-serif; font-size:13.5px; line-height:1.55; color:rgba(26,43,74,0.74);">Muchas gracias Chang por este viaje inolvidable tan bien planificado. Gracias por ser tan auténtico como pareces y Gracias al grupo fantastico por las risas y momentos compartidos. 😍</div></div><div style="flex:0 0 auto; display:flex; flex-direction:column; align-items:center; gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="#C85A3C" stroke-width="1.7" style="width:16px;height:16px;display:block;"><path d="M12 21s-7.5-4.9-9.7-9C.8 8.6 2.3 5 5.7 5c2 0 3.4 1.2 4.3 2.6C10.9 6.2 12.3 5 14.3 5c3.4 0 4.9 3.6 3.4 7-2.2 4.1-9.7 9-9.7 9z" transform="translate(-.3 -1)"/></svg><span style="font-size:12px; color:rgba(26,43,74,0.45);">2</span></div></div>
+      <div style="flex:1 1 100%; background:white; border-radius:3px; box-shadow:0 3px 20px rgba(26,43,74,0.06); padding:20px; display:flex; gap:12px; opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.44s ease, transform 0.8s 0.44s ease;" data-fade=""><div style="flex:0 0 44px; width:44px; height:44px; border-radius:50%; overflow:hidden;"><img src="images/658ca07f-986d-42d6-ada4-f1fec2b5da25.png" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;"><span style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:#1A2B4A;">mariangela.1703</span><span style="font-size:12.5px; color:rgba(26,43,74,0.45);">10w</span></div><div style="font-family:'Montserrat',sans-serif; font-size:13.5px; line-height:1.55; color:rgba(26,43,74,0.74);">Sres del segundo tour, <span style="color:#C85A3C; font-weight:600;">@comekimchi</span> es el mejor guía de Corea, disfruten al máximo y consuman todo el contenido que el le ofrece por que es humanizado, concientizado, familiarizado y sobre todo estudiado… sin desperdicio y las gracias a <span style="color:#C85A3C; font-weight:600;">@hamketours</span></div></div><div style="flex:0 0 auto; display:flex; flex-direction:column; align-items:center; gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="#C85A3C" stroke-width="1.7" style="width:16px;height:16px;display:block;"><path d="M12 21s-7.5-4.9-9.7-9C.8 8.6 2.3 5 5.7 5c2 0 3.4 1.2 4.3 2.6C10.9 6.2 12.3 5 14.3 5c3.4 0 4.9 3.6 3.4 7-2.2 4.1-9.7 9-9.7 9z" transform="translate(-.3 -1)"/></svg><span style="font-size:12px; color:rgba(26,43,74,0.45);">3</span></div></div>
+      <div style="flex:1 1 100%; background:white; border-radius:3px; box-shadow:0 3px 20px rgba(26,43,74,0.06); padding:20px; display:flex; gap:12px; opacity:0; transform:translateY(30px); transition:opacity 0.8s 0.5s ease, transform 0.8s 0.5s ease;" data-fade=""><div style="flex:0 0 44px; width:44px; height:44px; border-radius:50%; overflow:hidden;"><img src="images/86394a20-9809-4c14-895f-362b3f67b661.png" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;"><span style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:#1A2B4A;">murquiza1948</span><span style="font-size:12.5px; color:rgba(26,43,74,0.45);">3w</span></div><div style="font-family:'Montserrat',sans-serif; font-size:13.5px; line-height:1.55; color:rgba(26,43,74,0.74);">Siempre supe que te iba a ir muy pero muy bien en tu proyecto, porque desde que te vi me di cuenta que eres muy trabajador tenaz y muy perseverante en tus propósitos. La vida una y la de tu familia estoy segura que es bendecida. Sigue adelante con tus proyectos y estoy agradecida a la vida por haberme dado la oportunidad de viajar a Corea y haberte conocido. Bendiones para Cayoung y para ti, Mayo está bello de la abuelita de Miami</div></div><div style="flex:0 0 auto; display:flex; flex-direction:column; align-items:center; gap:4px;"><svg viewBox="0 0 24 24" fill="none" stroke="#C85A3C" stroke-width="1.7" style="width:16px;height:16px;display:block;"><path d="M12 21s-7.5-4.9-9.7-9C.8 8.6 2.3 5 5.7 5c2 0 3.4 1.2 4.3 2.6C10.9 6.2 12.3 5 14.3 5c3.4 0 4.9 3.6 3.4 7-2.2 4.1-9.7 9-9.7 9z" transform="translate(-.3 -1)"/></svg><span style="font-size:12px; color:rgba(26,43,74,0.45);">1</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="section-pad" style="padding:110px 56px; background:#1A2B4A; text-align:center; position:relative; overflow:hidden;">
+  <span style="position:absolute; bottom:-50px; left:-30px; font-family:'Noto Serif KR',serif; font-size:300px; color:rgba(255,255,255,0.02); font-weight:700; pointer-events:none; user-select:none; line-height:1;">여행</span>
+  <span style="position:absolute; top:-40px; right:-20px; font-family:'Noto Serif KR',serif; font-size:200px; color:rgba(255,255,255,0.016); font-weight:700; pointer-events:none; user-select:none; line-height:1;">코리아</span>
+  <div style="position:relative; z-index:1; max-width:680px; margin:0 auto; opacity:0; transform:translateY(30px); transition:opacity 0.9s ease, transform 0.9s ease;" data-fade="">
+    <p style="font-family:'Noto Serif KR',serif; font-size:12px; color:rgba(255,174,185,0.75); letter-spacing:6px; text-transform:uppercase; margin-bottom:18px;"></p>
+    <h2 style="font-family:'Montserrat',sans-serif; font-size:clamp(34px,5vw,62px); font-weight:900; color:white; letter-spacing:-2px; line-height:1.05; margin-bottom:22px; text-wrap:balance;">¿Listo para tu aventura coreana?</h2>
+    <p style="font-size:17px; color:rgba(255,255,255,0.52); line-height:1.77; margin-bottom:48px; max-width:500px; margin-left:auto; margin-right:auto;">Escríbenos por Instagram o WhatsApp y diseñamos juntos el tour perfecto para ti.</p>
+    <div class="cta-btns" style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" style="background:#C85A3C; color:white; text-decoration:none; font-size:13px; font-weight:700; letter-spacing:1.5px; padding:17px 38px; border-radius:2px; transition:background 0.22s, transform 0.22s;" style-hover="background:#D4644A; transform:translateY(-2px);">INSTAGRAM ↗</a>
+    </div>
+    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:22px;">
+      <a href="https://www.instagram.com/comekimchi" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; color:rgba(255,255,255,0.72); text-decoration:none; font-size:13px; font-weight:600; padding:9px 16px; border:1px solid rgba(255,255,255,0.16); border-radius:40px; transition:color 0.25s, border-color 0.25s;" style-hover="color:#fff; border-color:rgba(255,255,255,0.42);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:16px;height:16px;flex:0 0 auto;"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@comekimchi</a>
+      <a href="https://www.tiktok.com/@comekimchi" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; color:rgba(255,255,255,0.72); text-decoration:none; font-size:13px; font-weight:600; padding:9px 16px; border:1px solid rgba(255,255,255,0.16); border-radius:40px; transition:color 0.25s, border-color 0.25s;" style-hover="color:#fff; border-color:rgba(255,255,255,0.42);"><svg viewBox="0 0 24 24" fill="currentColor" style="width:15px;height:15px;flex:0 0 auto;"><path d="M16.5 3c.3 2 1.6 3.6 3.5 3.9v2.5c-1.4 0-2.7-.4-3.8-1.1v6.3c0 3.2-2.6 5.4-5.5 5.4S5.2 17.8 5.2 15c0-2.9 2.4-5 5.3-4.8v2.6c-1.4-.3-2.7.7-2.7 2.1 0 1.3 1 2.3 2.3 2.3s2.3-1 2.3-2.5V3h2.1z"/></svg>@comekimchi</a>
+      <a href="https://www.youtube.com/@Chagabee" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; color:rgba(255,255,255,0.72); text-decoration:none; font-size:13px; font-weight:600; padding:9px 16px; border:1px solid rgba(255,255,255,0.16); border-radius:40px; transition:color 0.25s, border-color 0.25s;" style-hover="color:#fff; border-color:rgba(255,255,255,0.42);"><svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;flex:0 0 auto;"><path d="M23 12s0-3.2-.4-4.7c-.2-.8-.9-1.5-1.7-1.7C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.9.4c-.8.2-1.5.9-1.7 1.7C1 8.8 1 12 1 12s0 3.2.4 4.7c.2.8.9 1.5 1.7 1.7 1.5.4 8.9.4 8.9.4s7.4 0 8.9-.4c.8-.2 1.5-.9 1.7-1.7.4-1.5.4-4.7.4-4.7zM9.8 15V9l5.2 3-5.2 3z"/></svg>@chagabee</a>
+    </div>
+  </div>
+</section>
+
+<!-- Instagram floating label -->
+<a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" style="position:fixed; bottom:104px; right:30px; z-index:999; background:#fff; color:#1A2B4A; text-decoration:none; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; line-height:1; text-align:center; padding:9px 16px; border-radius:999px; box-shadow:0 6px 18px rgba(0,0,0,0.15); border:1px solid rgba(26,43,74,0.06);">Cotiza Gratis<span style="position:absolute; bottom:-6px; right:26px; width:15px; height:15px; background:#fff; transform:rotate(45deg); border-bottom-right-radius:3px; box-shadow:3px 3px 6px rgba(0,0,0,0.07);"></span></a>
+<!-- Instagram floating button -->
+<a href="https://ig.me/m/hamketours" target="_blank" rel="noopener" title="Escríbenos por Instagram" style="position:fixed; bottom:28px; right:28px; z-index:999; width:58px; height:58px; border-radius:50%; background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF); display:flex; align-items:center; justify-content:center; box-shadow:0 6px 24px rgba(221,42,123,0.45), 0 2px 8px rgba(0,0,0,0.18); transition:transform 0.22s, box-shadow 0.22s; text-decoration:none;" style-hover="transform:scale(1.10); box-shadow:0 10px 32px rgba(221,42,123,0.55), 0 2px 8px rgba(0,0,0,0.2);">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:30px; height:30px; fill:none; stroke:white; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+</a>
+
+<!-- FOOTER -->
+<footer style="padding:32px 56px; background:#111D2E; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+  <div style="display:flex; align-items:center; gap:10px;">
+    <img src="images/99eb590a-0f2b-47f9-a5e6-899c394089bd.png" alt="Hamke Tours" style="width:34px; height:34px; border-radius:50%; object-fit:cover; border:1.5px solid rgba(255,255,255,0.12);">
+    <span style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; color:rgba(255,255,255,0.72); letter-spacing:0.8px;">HAMKE TOURS</span>
+  </div>
+  <p style="font-size:11px; color:rgba(255,255,255,0.28); letter-spacing:0.3px;">© 2026 Hamke Tours · Seúl, Corea del Sur 🇰🇷</p>
+  <div style="display:flex; gap:20px;">
+    <a href="https://www.instagram.com/hamketours" target="_blank" style="color:rgba(255,255,255,0.42); text-decoration:none; font-size:12px; font-weight:500; transition:color 0.2s;" style-hover="color:rgba(255,255,255,0.82);">Instagram</a>
+    <a href="#tours" style="color:rgba(255,255,255,0.42); text-decoration:none; font-size:12px; font-weight:500; transition:color 0.2s;" style-hover="color:rgba(255,255,255,0.82);">Tours</a>
+    <a href="#contact" style="color:rgba(255,255,255,0.42); text-decoration:none; font-size:12px; font-weight:500; transition:color 0.2s;" style-hover="color:rgba(255,255,255,0.82);">Contacto</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var fadeObs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';fadeObs.unobserve(e.target);}});},{threshold:0.12});
+  document.querySelectorAll('[data-fade]').forEach(function(el){fadeObs.observe(el);});
+  var layer=document.getElementById('hero-bg-layer');
+  if(layer){window.addEventListener('scroll',function(){layer.style.transform='translateY('+(window.scrollY*0.20)+'px)';},{passive:true});}
+  // ---- Stats count-up on scroll ----
+    (function(){
+      var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+      var els = document.querySelectorAll('.hks-count');
+      if(!els.length) return;
+      function fmt(v,dec,suf){ return (dec>0 ? v.toFixed(dec) : Math.round(v).toString()) + suf; }
+      function run(el){
+        var target=parseFloat(el.dataset.target), suf=el.dataset.suffix||'', dec=parseInt(el.dataset.dec||'0',10);
+        if(!el.firstChild){ el.textContent=fmt(target,dec,suf); return; }
+        if(reduce){ el.firstChild.nodeValue=fmt(target,dec,suf); return; }
+        var t0=null, dur=1500;
+        function step(now){ if(!t0)t0=now; var p=Math.min((now-t0)/dur,1), e=1-Math.pow(1-p,3);
+          el.firstChild.nodeValue=fmt(target*e,dec,suf); if(p<1)requestAnimationFrame(step); }
+        el.firstChild.nodeValue=fmt(0,dec,suf);
+        requestAnimationFrame(step);
+      }
+      var done=false;
+      var tgt=document.getElementById('hero-stats')||els[0];
+      var obs=new IntersectionObserver(function(ents){ ents.forEach(function(en){
+        if(en.isIntersecting && !done){ done=true; els.forEach(run); obs.disconnect(); } }); }, {threshold:0.3});
+      obs.observe(tgt);
+    })();
+
+  // style-hover polyfill (framework attribute -> real hover)
+  document.querySelectorAll('[style-hover]').forEach(function(el){
+    var hov=el.getAttribute('style-hover'); var base=el.getAttribute('style')||'';
+    el.addEventListener('mouseenter',function(){ el.setAttribute('style', base+';'+hov); });
+    el.addEventListener('mouseleave',function(){ el.setAttribute('style', base); });
+  });
+})();
+</script>
+</body>
+</html>
